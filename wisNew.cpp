@@ -48,6 +48,13 @@ public:
             dp[i] = max(excludeProfit, includeProfit);
         }
 
+        // Printing the final DP table
+        cout << "Final DP Table: ";
+        for (int i = 0; i < n; i++) {
+            cout << dp[i] << " ";
+        }
+        cout << endl;
+
         // The last element in dp array will store the maximum profit
         return dp[n - 1];
     }

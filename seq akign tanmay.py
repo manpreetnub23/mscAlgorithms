@@ -27,9 +27,9 @@ def edit_distance_bottom_up(seqA, seqB, gap_penalty, substitution_cost):
                 substitution = substitution_cost  # Cost for substitution
 
             dp[i][j] = min(
-                dp[i - 1][j] + gap_penalty,         # Deletion
-                dp[i][j - 1] + gap_penalty,         # Insertion
-                dp[i - 1][j - 1] + substitution      # Substitution
+                dp[i - 1][j] + gap_penalty,
+                dp[i][j - 1] + gap_penalty,         
+                dp[i - 1][j - 1] + substitution      
             )
 
     return dp, dp[n][m]
